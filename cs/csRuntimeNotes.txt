@@ -1,0 +1,66 @@
+>>extraLargeArray runtime results:
+$ node runtime.js(first runtime)
+Results for the extraLargeArray
+insert 788.221 ms
+append 2.872 ms
+
+$ node runtime.js(second runtime)
+Results for the extraLargeArray
+insert 824.2903 ms
+append 3.6142 ms
+
+Above is the results for each time I ran the functions. I ran it twice just to confirm the results. The push method is the quicker process in regards to time and space complexity . 
+
+>>tinyArray runtime results:
+$ node runtime.js(first runtime)
+Results for the tinyArray
+insert 34.1 μs
+append 82.5 μs
+
+$ node runtime.js(second runtime)
+Results for the tinyArray
+insert 36.6 μs
+append 87.9 μs
+
+
+>>smallArray runtime results:
+$ node runtime.js (first runtime)
+Results for the smallArray
+insert 55.7 μs
+append 116 μs
+
+$ node runtime.js (second runtime)
+Results for the smallArray
+insert 42.3 μs
+append 99.3 μs
+
+
+>>mediumArray runtime results:
+$ node runtime.js (first runtime)
+Results for the mediumArray
+insert 135.7 μs
+append 131 μs
+
+$ node runtime.js
+Results for the mediumArray
+insert 140.2 μs
+append 128.6 μs
+
+
+>>largeArray runtime results:
+$ node runtime.js (first runtime)
+Results for the largeArray
+insert 7.8797 ms
+append 473.4 μs
+
+
+$ node runtime.js
+Results for the largeArray
+insert 7.841 ms
+append 492.8 μs
+
+
+
+
+
+  
