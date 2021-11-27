@@ -43,7 +43,9 @@ Results for the extraLargeArray
 insert 824.2903 ms
 append 3.6142 ms
 
-Above is the results for each time I ran the functions. I ran it twice just to confirm the results. The push method is the quicker process in regards to time and space complexity. Inserting, the pop function, was alot quicker than the append function for the extraLargeArray that was assigned to (100000)
+
+
+Above is the results for each time I ran the functions. I ran it twice just to confirm the results. The push method is the quicker process in regards to time and space complexity. Append, the push() method, was alot quicker than the insert function for the extraLargeArray that was assigned to (100000). Because the insert function has to add an item from the beginning of the array and increment all the elements that are already present in the array, it takes a lot longer than the append, push() method inserts an element at the end of the array so none of the array element has to change. 
 
 >>tinyArray runtime results:
 $ node runtime.js(first runtime)
@@ -55,6 +57,8 @@ $ node runtime.js(second runtime)
 Results for the tinyArray
 insert 36.6 μs
 append 87.9 μs
+
+Due to the array being so small and assigned (10). The insert, unshift() method is alot quicker than the push method. 
 
 
 >>smallArray runtime results:
@@ -68,6 +72,8 @@ Results for the smallArray
 insert 42.3 μs
 append 99.3 μs
 
+Still at this point the insert, unshift() method, is quicker time complexity than the append function, push() method. Only because the size of smallArray(100) < extraLargeArray(100000). 
+
 
 >>mediumArray runtime results:
 $ node runtime.js (first runtime)
@@ -75,10 +81,12 @@ Results for the mediumArray
 insert 135.7 μs
 append 131 μs
 
-$ node runtime.js
+$ node runtime.js(second runtime)
 Results for the mediumArray
 insert 140.2 μs
 append 128.6 μs
+
+I am glad I ran this twice. As you can see from the first run. It was very close, but at the second run. The insert function became very clear that it was a slower process for the mediumArray size. So the turning point of choosing whether to go with unshift() or push() method would be around (1000). At this point after, the append function, push() method has the better runtimes for the larger arrays because of the larger numbers. 
 
 
 >>largeArray runtime results:
@@ -88,13 +96,20 @@ insert 7.8797 ms
 append 473.4 μs
 
 
-$ node runtime.js
+$ node runtime.js(second runtime)
 Results for the largeArray
 insert 7.841 ms
 append 492.8 μs
 
+Due to the size of the largeArray(10000), the append function, push() method, was performed in microns of seconds compared to the insert function, unshift() method, done in milliseconds. One can see here the difference size of an array can make on methods and results in performance time even if it's within microns to milliseconds of a time frame.
 
 
 
+Push () method is a constant time O(1) and unshift() method is linear time O(n). The push method does not cause a shift in the index, it only adds a new index for the new item at the end of the array. Because push() method is on a constant time, it always takes a fixed number of steps, no matter how large the input the size increases.
+
+The unshift() method add items from the beginning of the array. It causes an index shift for all other elements in the array. It runs on linear time because it is directly related to the size of our input and going through each item within the array. The larger the input, the greater the amount of time it takes to perform the function. 
+
+
+Why some functions are slower than others? It is because of their algorithm(s). Which big O run time they fall under determines the time complexity of each process. This is why it is important to use efficient algorithm so we save on time and money. The major runtimes are: Constant time(O(1)), Logarithmic time(O(n log n)), Linear time(O(n)), Quadratic time(O(n^2)), Exponential time(O(2^n)) and Factorial time()(n!). Depending on what time the function code falls under and how many steps it takes to execute will determine it's runtime. Something as complex as a Factorial runtime or Exponential Runtime will not be as quick as a Constant runtime where no matter how large the input is, the step does not change. 
 
   
