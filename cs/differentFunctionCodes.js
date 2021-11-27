@@ -1,13 +1,18 @@
-function addToZero (x,y) {
-    if(x + y === 0){
-        return true
-    } else {
+let arr = [3, 0, -3];
+let arr2 = [2, 4, 6];
+function addToZero (arr) {
+    let sum = arr.reduce((a,b) => a+b,0)
+    for(let i = 0; i <arr.length; i++){
+        if (sum ==0){
+         return true   
+        }
+        
+    } 
         return false
     }
-}
-
-let addtoZeroRuntime = "linear time, O(n)"/console.log(addToZero(3,2))
-console.log(addToZero(0,0))
+    
+console.log(addToZero(arr))//prints true
+console.log(addToZero(arr2))//prints false
 
 
 
@@ -22,8 +27,8 @@ let isUnique = (str) => {
     return true;
   };
   
-  console.log(isUnique('Louisiana'));
-  console.log(isUnique('Dad'));
+  console.log(isUnique('Louisiana'));//prints false
+  console.log(isUnique('Dad'));//prints true
 
 
 
@@ -44,20 +49,20 @@ let isUnique = (str) => {
       return true;
   }
 
-  console.log(isPangram("The quick brown fox jumps over the lazy dog!"));
+  console.log(isPangram("The quick brown fox jumps over the lazy dog!"));//prints true
 
-  console.log(isPangram("Butters is tan."))
+  console.log(isPangram("Butters is tan."))//prints false
 
 
 
-  
+
 
 
 
   let randomArray = ["Kitties", "are", "better", "thank", "Goodness"]
 
   newArr = randomArray.sort(function(a, b) {return b.length - a.length})[0].length;
-  console.log(newArr)
+  console.log(newArr)//prints 8
 
   
  

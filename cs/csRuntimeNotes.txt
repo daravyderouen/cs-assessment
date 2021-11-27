@@ -1,3 +1,37 @@
+The functions used are listed below:
+
+function doublerAppend(nums){
+
+    let new_nums = [];
+
+    for (let i=0; i<nums.length; i++){
+        let num = nums[i] * 2;
+        new_nums.push(num);
+    }
+
+}
+
+
+function doublerInsert(nums){
+
+    let new_nums = [];
+
+    for (let i=0; i<nums.length; i++){
+        let num = nums[i] * 2;
+        new_nums.unshift(num);
+    }
+
+}
+
+
+function getSizedArray(size){
+    let array = [];
+    for (let i=0; i<size; i++){
+        array.push(i);
+    }
+    return array
+}
+
 >>extraLargeArray runtime results:
 $ node runtime.js(first runtime)
 Results for the extraLargeArray
@@ -9,7 +43,7 @@ Results for the extraLargeArray
 insert 824.2903 ms
 append 3.6142 ms
 
-Above is the results for each time I ran the functions. I ran it twice just to confirm the results. The push method is the quicker process in regards to time and space complexity . 
+Above is the results for each time I ran the functions. I ran it twice just to confirm the results. The push method is the quicker process in regards to time and space complexity. Inserting, the pop function, was alot quicker than the append function for the extraLargeArray that was assigned to (100000)
 
 >>tinyArray runtime results:
 $ node runtime.js(first runtime)
