@@ -13,7 +13,7 @@ function addToZero (arr) {
     
 console.log(addToZero(arr))//prints true
 console.log(addToZero(arr2))//prints false
-
+//addToZero function has a linear runtime, O(n) and it's space complexity is linear O(n).
 
 
 
@@ -30,6 +30,7 @@ let isUnique = (str) => {
   console.log(isUnique('Louisiana'));//prints false
   console.log(isUnique('Dad'));//prints true
 
+//isUnique has a Constant runtime, O(1) because it's just looking up something. It's space complexity is constant O(1).
 
 
 
@@ -53,6 +54,8 @@ let isUnique = (str) => {
 
   console.log(isPangram("Butters is tan."))//prints false
 
+  //isPangram function has a linear runtime, O(n), and it's space complexity is O(n).
+
 
 
 
@@ -61,8 +64,8 @@ let isUnique = (str) => {
 
   let randomArray = ["Kitties", "are", "better", "thank", "Goodness"]
 
-  newArr = randomArray.sort(function(a, b) {return b.length - a.length})[0].length;
-  console.log(newArr)//prints 8
+  findLongestWord = randomArray.sort(function(a, b) {return b.length - a.length})[0].length;
+  console.log(findLongestWord)//prints 8
 
-  
+  //findLongestWord function has a Logarithmic runtime, O(n log n) and a logarithmic space complexity. Because I used the sort method. 
  
